@@ -1,0 +1,34 @@
+<!-- To change anything in website using ...command : document.designMode="on" -->
+
+<!-- Please check notes for more details ( Chapter:8 )-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">Hey I Am Box</div>
+    </div>
+
+    <script>
+        // Method 1 : By Node
+
+        let div = document.createElement("div");
+        div.innerHTML="I have been inserted <b> CHETAN </b>"
+        div.setAttribute("class","created");  // set that class = created
+        document.querySelector(".container").append(div); //see at the last of the line using append
+
+
+        // Method 2 : By HTML
+
+        let cont = document.querySelector(".container")
+        cont.insertAdjacentHTML("afterend","<b> i am Chetan</b>")
+        
+    </script>
+</body>
+</html>
+
+
